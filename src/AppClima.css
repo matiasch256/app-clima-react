@@ -14,12 +14,9 @@ body {
 }
 
 .container {
-  background: white;
   padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   text-align: center;
-  width: 350px;
+  width: 500px;
 }
 
 .title {
@@ -56,6 +53,14 @@ body {
 }
 
 .weather-info {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+h2 {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+p {
   font-size: 1.2rem;
   margin-top: 1rem;
 }
