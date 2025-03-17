@@ -52,16 +52,24 @@ export const AppClima = () => {
                   ? "Argentina"
                   : weather.sys.country}
               </h2>
-              <p>Temperatura: {Math.floor(weather.main.temp - difKelvin)}°C</p>
-              <p>Humedad: {weather.main.humidity}%</p>
-              <p>Visibilidad: {weather.visibility / 1000} KM</p>
-              <p>Velocidad del viento: {Math.floor(weather.wind.speed)} km/h</p>
-              <p>Velocidad del viento: {Math.floor(weather.wind.speed)} km/h</p>
-              <p>Presion Atmosferica: {weather.main.pressure} KPa</p>
-              <p>
-                Condición meteorologica actual: {weather.weather[0].description}{" "}
-              </p>
+              <div class="weather-details">
+                <p>
+                  Temperatura: {Math.floor(weather.main.temp - difKelvin)}°C
+                </p>
+                <p>Humedad: {weather.main.humidity}%</p>
+                <p>Visibilidad: {weather.visibility / 1000} KM</p>
+                <p>
+                  Velocidad del viento: {Math.floor(weather.wind.speed)} km/h
+                </p>
+                <p>
+                  Velocidad del viento: {Math.floor(weather.wind.speed)} km/h
+                </p>
+                <p>Presion Atmosferica: {weather.main.pressure} KPa</p>
+                <p>Clima: {weather.weather[0].description} </p>
+              </div>
+
               <img
+                className="weather-icon"
                 src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}
                 alt=""
               />

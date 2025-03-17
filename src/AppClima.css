@@ -51,14 +51,30 @@ body {
 .weather-info {
   font-size: 1.2rem;
   margin-top: 1rem;
+  display: flex;
+  flex-direction: column; /* Acomoda en columna */
+  align-items: center; /* Centra contenido */
+  text-align: left;
+}
+.weather-details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+  gap: 10px;
+  column-gap: 35px;
+  max-width: 500px;
+  margin-top: 1rem;
+  text-align: left;
+}
+.weather-icon {
+  margin-top: 1rem;
 }
 h2 {
   font-size: 1.5rem;
   margin-top: 1rem;
+  text-align: left;
 }
 p {
-  font-size: 1.2rem;
-  margin-top: 1rem;
+  font-size: 1rem;
 }
 
 .pInfo {
