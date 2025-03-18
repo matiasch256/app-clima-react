@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./AppClima.css";
 import { NavBar } from "./components/navbar/NavBar";
+import solIcon from "./assets/icons8-verano-100.png";
 
 export const AppClima = () => {
   const urlBase = "https://api.openweathermap.org/data/2.5/weather";
@@ -52,7 +53,7 @@ export const AppClima = () => {
                   ? "Argentina"
                   : weather.sys.country}
               </h2>
-              <div class="weather-details">
+              <div className="weather-details">
                 <p>
                   Temperatura: {Math.floor(weather.main.temp - difKelvin)}°C
                 </p>
@@ -70,7 +71,11 @@ export const AppClima = () => {
 
               <img
                 className="weather-icon"
-                src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}
+                src={
+                  weather.weather[0].description === "cielo claro"
+                    ? solIcon
+                    : `https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`
+                }
                 alt=""
               />
             </>
